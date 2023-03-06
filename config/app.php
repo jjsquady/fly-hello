@@ -185,6 +185,7 @@ return [
         /*
          * Package Service Providers...
          */
+        \App\Providers\TenantSchemaProvider::class,
 
         /*
          * Application Service Providers...

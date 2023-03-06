@@ -13,7 +13,7 @@ processes = []
 [env]
   APP_ENV = "production"
   DB_CONNECTION = "pgsql"
-  DB_HOST = "rocketslab-pgsql.internal"
+  DB_HOST = "rl-pgsql.internal"
   DB_DATABASE = "fly_hello"
   DB_PORT = 5432
   LOG_CHANNEL = "stderr"

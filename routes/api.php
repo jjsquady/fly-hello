@@ -18,11 +18,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/users', function () {
+Route::middleware('tenant.domain')->get('/users', function () {
+
     return \App\Models\User::all();
+
 });
 
-Route::post('/users', function (\Illuminate\Http\Request $request) {
+Route::middleware('tenant.domain')->post('/users', function (\Illuminate\Http\Request $request) {
 
     $validator = Validator::make($request->all(),[
         'name' => 'required',
